@@ -11,12 +11,17 @@ function App() {
  
 
   return (
-    <div>
+    <div style={{background : '#F1F6F5'}} >
     <Navbar /> 
   
     
     
-    <ComponenteContainer saludo = 'Bienvenidos a Supermercadito'/>
+    <ComponenteContainer saludos= 'Bienvenidos a Supermercadito' >
+      <Navbar />
+      <Navbar />
+      </ComponenteContainer>
+
+
   
     </div>
     

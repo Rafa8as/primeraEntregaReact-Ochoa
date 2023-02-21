@@ -2,8 +2,10 @@ import CartWidget from "../CartWidget/CartWidget"
 
 function Navbar(){
     return (
-  <nav className='App'>
-        <label>Supermercadito</label>
+  <nav className='App' style={{ background: '#FED049'} }>
+        <label>Supermercadito
+            <a href="_blank" target= "_blank"></a>
+        </label>
         <p>Asado</p>
         <p>Gaseosa</p>
         <p>Cerveza</p>

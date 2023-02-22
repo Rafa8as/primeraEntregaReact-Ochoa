@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { gFetch } from "../../Utils/gFetch"
+
 import Formulario from "../Formulario/Formulario"
 import Titulo from "../Titulo/Titulo"
 
@@ -30,9 +31,10 @@ export const ComponenteContainer = ({saludos} ) => {
   <label> Categoria: {producto.categoria}</label>
   <label> Precio: {producto.price}</label>
   <label> Stock: {producto.stock}</label>
+  
 </div>
 <div className="card footer">
-  <button className="btn btn-outline-dark w-100 ">Detalle</button>
+  <button className="btn btn-outline-dark w-100 ">Detalle </button>
 </div>
     </div>)}
     </div>

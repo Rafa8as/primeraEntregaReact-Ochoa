@@ -1,44 +1,45 @@
 import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
 import { gFetch } from "../../Utils/gFetch"
 
 import Formulario from "../Formulario/Formulario"
+import ItemList from "../ItemList/ItemList"
 import Titulo from "../Titulo/Titulo"
 
-export const ComponenteContainer = ({saludos} ) => {
-  const [productos,setProductos] = useState ([])
-  const [loading,setLoading] = useState (true)
-  useEffect (() => {
-    gFetch ()
-    .then (resp =>setProductos (resp))
-    .catch (err => console.log (err))
-    .finally ( ()=> setLoading (false))
+export const ComponenteContainer = ({ saludos }) => {
+  const [productos, setProductos] = useState([])
+  const [loading, setLoading] = useState(true)
+  const { idCategoria } = useParams()
 
-  }, [])
- 
+  useEffect(() => {
+    if (idCategoria) {
+      gFetch()
+        .then(resp => setProductos(resp.filter(producto => producto.categoria === idCategoria)))
+        .catch(err => console.log(err))
+        .finally(() => setLoading(false))
+
+
+    } else {
+      gFetch()
+      .then(resp => setProductos(resp))
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
+
+
+    }
+
+  }, [idCategoria])
+
   return (
     <>
-    <h2>{saludos} </h2>
-    { loading ?
-    <h2>Cargando..</h2> 
-    :
-    <div>
-    {productos.map (producto =>
-       <div key= {producto.id} className="card w-50">
-<div className="card-header"> Nombre : {producto.name}</div>
-<div className="card-body">
-  <img className="w-100" src={producto.foto} />
-  <br /> 
-  <label> Categoria: {producto.categoria}</label>
-  <label> Precio: {producto.price}</label>
-  <label> Stock: {producto.stock}</label>
-  
-</div>
-<div className="card footer">
-  <button className="btn btn-outline-dark w-100 ">Detalle </button>
-</div>
-    </div>)}
-    </div>
-    }
+      <h2>{saludos} </h2>
+      {loading ?
+        <h2>Cargando..</h2>
+        :
+        
+        <ItemList productos={productos}/>
+        
+      }
     </>
   )
 }
@@ -47,7 +48,7 @@ export const ComponenteContainer = ({saludos} ) => {
   if (condition){setTimeout (()=>res (productos))}
    const [bouleano,setBouleano] = useState (0)
      /*let count = 0*/
-    
+
 /*
     console.log (count)
   const handleCount = () => {

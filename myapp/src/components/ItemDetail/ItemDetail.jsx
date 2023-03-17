@@ -19,7 +19,7 @@ const ItemDetail = ({ product }) => {
             <div className="row">
                 <div className="col-6">
                     <div>
-                        <img src={product.foto} alt='image' className="w-50" />
+                        <img src={product.foto} alt='image' className="w-30" />
                     </div>
                     <div>
                         <p className="" >Nombre: {product.name}</p>

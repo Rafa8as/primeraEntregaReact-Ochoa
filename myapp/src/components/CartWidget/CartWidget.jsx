@@ -1,4 +1,4 @@
-import { useCartContext } from "../../context/CartContext"
+import { useCartContext } from "../../Context/CartContext"
 
 const CartWidget = () => {const {cantidadTotal} = useCartContext ()
   return (

@@ -1,7 +1,7 @@
-import { Firebase } from '@icons-pack/react-simple-icons'
 import React, { useContext } from 'react'
 import { useCartContext } from '../../Context/CartContext'
-import { addDoc, collection, getFirestore } from "Firebase/firestore"
+import Cartlist from "../../components/CartList/CartList"
+import { addDoc, collection, getFirestore } from "firebase/firestore"
 import Form from '../../components/Form/Form'
 import './CartContainer.css'
 

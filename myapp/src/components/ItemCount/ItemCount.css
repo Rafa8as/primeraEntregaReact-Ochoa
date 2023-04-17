@@ -1,0 +1,90 @@
+/* CONTADOR */
+#accountant{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BOTONES RESTAR Y SUMAR */
+#btnAccountant{
+    display: flex;
+    gap: 250px;
+}
+.btnAccountant{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #d5e33f;
+    color: black;
+}
+.btnAccountant:hover{
+    background-color: #9a70b0;
+    color: white;
+}
+.btnAccountant:active{
+    background-color: rgb(253, 241, 180);
+    color: black;
+}
+
+/* BOTON SUMAR */
+.btnAccountantSuma{
+    padding: 20px;
+}
+
+/* BOTON RESTAR */
+.btnAccountantResta{
+    padding: 20px;
+}
+
+/* VALOR CANTIDAD */
+.valiuAccountant{
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+/* BOTON AGREGAR AL CARRITO */
+.btnAddToCart{
+    font-family: 'Amatic SC', cursive;
+    border-radius: 30px;
+    background-color: #9a70b0;
+    color: black;
+    border: none;
+}
+.btnAddToCart:hover{
+    background-color:#d5e33f;
+    color: black;
+}
+.btnAddToCart:active{
+    background-color: rgb(253, 241, 180);
+    color: black;
+}
+
+
+@media (max-width: 894px) {
+    .btnAccountant{
+        font-size: 20px;
+    }
+
+    .valiuAccountant{
+        font-size: 20px;
+    }
+
+    .btnAddToCart{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 895px) {
+    .btnAccountant{
+        font-size: 20px;
+    }
+
+    .valiuAccountant{
+        font-size: 20px;
+    }
+
+    .btnAddToCart{
+        font-size: 20px;
+    }
+}

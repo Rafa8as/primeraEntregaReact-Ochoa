@@ -1,0 +1,59 @@
+/* PRODUCTOS CARRITO */
+#cartList{
+    border: solid 3px #d5e33f;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* TITULO PRODUCTOS CARRITO */
+.titleCartItem{
+    color: #9a70b0;
+}
+
+/* BOTON ELIMINAR PRODUCTO */
+.btnRemove{
+    font-family: 'Amatic SC', cursive;
+    border-radius: 30px;
+    background-color: #9a70b0;
+    color: black;
+    border: none;
+    padding: 10px;
+}
+.btnRemove:hover{
+    background-color: #d05656;
+    color: black;
+}
+.btnRemove:active{
+    background-color: rgb(253, 241, 180);
+    color: black;
+}
+
+
+@media (max-width: 894px) {
+    .titleCartItem{
+        font-size: 20px;
+    }
+
+    .cartItem{
+        font-size: 20px;
+    }
+
+    .btnRemove{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 895px) {
+    .titleCartItem{
+        font-size: 20px;
+    }
+
+    .cartItem{
+        font-size: 20px;
+    }
+
+    .btnRemove{
+        font-size: 20px;
+    }
+}

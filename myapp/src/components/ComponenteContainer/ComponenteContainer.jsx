@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { gFetch } from "../../Utils/gFetch"
 
-import Formulario from "../Formulario/Formulario"
+import Formulario from "../Form/Form"
 import ItemList from "../ItemList/ItemList"
 import Titulo from "../Titulo/Titulo"
 

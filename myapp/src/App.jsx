@@ -1,14 +1,19 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-/*import './App.css'*/
-import Navbar from './components/Navbar/Navbar'
-import ComponenteContainer from './components/ComponenteContainer/ComponenteContainer'
-import CartWidget from './components/CartWidget/CartWidget'
-import { NavbarBrand } from 'react-bootstrap'
-import ColorSchemesExample from './components/Navbar/Navbar'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import ItemCount from './components/ItemCount/ItemCount'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import './App.css'
+import ColorSchemesExample from './components/Navbar/Navbar'
+import ItemListContainer from './Container/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailContainer'
+import CartContainer from './Container/CartContainer/CartContainer'
 import { CartContextProvider } from './Context/CartContext'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+
+
+
+
+
+
+
 
 
 
@@ -27,16 +32,15 @@ function App() {
           <Routes>
                     
               
-                  <Route path='/' element ={<ComponenteContainer saludos= 'Bienvenidos a Supermercadito' />} />
-                  <Route path='/categoria/Home' element ={<ComponenteContainer/>} />
-                  <Route path='/categoria/:idCategoria' element ={<ComponenteContainer/>} />
+                  <Route path='/' element ={<ItemListContainer saludos= 'Bienvenidos a Supermercadito' />} />
+                  <Route path='/categoria/Home' element ={<ItemListContainer/>} />
+                  <Route path='/categoria/:idCategoria' element ={<ItemListContainer/>} />
                   <Route path='/detalle/:idProducto' element ={<ItemDetailContainer/>} />
 
-                  <Route path='/cart' element ={<CartWidget />} />
+                  <Route path='/cart' element ={<CartContainer />} />
                   <Route path='*' element ={<Navigate to='/' />} />
           </Routes>
-                  
-          <ItemCount initial={1} stock= {10} onAdd={()=>{}}/>
+          
                 
     </BrowserRouter>
     </CartContextProvider>

@@ -1,46 +1,51 @@
+
+
 import { useState } from "react"
-import { Link } from "react-router-dom"
-import { useCartContext } from "../../context/CartContext"
+import { useCartContext } from "../../Context/CartContext"
+import ButtonCart from "../ButtonCart/ButtonCart"
 import ItemCount from "../ItemCount/ItemCount"
 
-const ItemDetail = ({ product }) => {
-    const [isCount, setIsCount] = useState(true)
-    const { agregarCart } = useCartContext()
+import './ItemDetail.css'
 
-    function onAdd(cantidad) {
-        console.log(cantidad)
+const ItemDetail = ({producto}) => {
 
-        agregarCart({ ...product, cantidad })
-        setIsCount(false)
-    }
+  const iva = 1.21
 
-    return (
-        <div>
-            <div className="row">
-                <div className="col-6">
-                    <div>
-                        <img src={product.foto} alt='image' className="w-30" />
-                    </div>
-                    <div>
-                        <p className="" >Nombre: {product.name}</p>
-                        <p className="" >Categoría: {product.categoria}</p>
-                        <p className="" >Precio: {product.price}</p>
-                    
-                    </div>
-                </div>
-                <div className="col-6">
-                    {isCount ?
-                        <ItemCount initial={1} stock={10} onAdd={onAdd} />
-                        :
-                        <>
-                            <Link to='/cart' className="btn btn-primary">Ir a cart</Link>
-                            <Link to='/' className="btn btn-primary">Seguir Comprando</Link>
-                        </>
-                    }
-                </div>
-            </div>
-        </div>
-    )
+  const { addToCart } = useCartContext();
+  const [inputType, setInputType] = useState('button');
+
+
+  const onAdd = (quantity) => {
+    addToCart ({...producto, quantity})
+    setInputType('input')
+  }
+  
+
+  return (
+    <div id="cartItemDetail">
+      <div className="container">
+        <h2 className="nameProduct">{producto.name}</h2>
+        <img src={producto.foto} alt="imagen producto" className="imgProduct" />
+        <p className="descriptionProduct">{producto.categoria}</p>
+
+       
+
+        <p className="priceProduct">${producto.price * iva}</p>
+      </div>
+
+      <div>
+        {
+          inputType === 'button' ? 
+            <ItemCount
+              stock={5}
+              initial={1}
+              onAdd={onAdd}
+            />
+          : <ButtonCart />     
+        }
+      </div>
+    </div>
+  )
 }
 
 export default ItemDetail

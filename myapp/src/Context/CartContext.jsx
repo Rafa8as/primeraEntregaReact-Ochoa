@@ -1,13 +1,14 @@
 import { createContext, useContext, useState } from "react";
 
-
+const iva = 1.21
 const CartContext = createContext([])
 
-export const useCartContext = () => {
-    return useContext(CartContext)
-} 
+// Cart Context Object
+export const useCartContext = () =>  useContext(CartContext)
 
 
+
+// incorporando Productos
 export const CartContextProvider = ({children}) => {
     
     const [cartList, setCartList] = useState([])
@@ -26,12 +27,18 @@ export const CartContextProvider = ({children}) => {
         
     }
     
-    const precioTotal = () => cartList.reduce( (count, producto) => count += (producto.cantidad*producto.price), 0)
+    // Precio Total
+    const precioTotal = () => cartList.reduce( (count, producto) => count += (producto.cantidad*producto.price * iva ), 0)
     
+    // Cantidad Total
+
     const cantidadTotal = () => cartList.reduce( (count, producto) => count += producto.cantidad, 0)
 
-    const eliminarProducto = (id) => setCartList(cartList.filter(prod => prod.id !== id))
+    // Eliminar Producto
+    const eliminarProducto = (id) => setCartList(cartList.filter(producto => producto.id !== id))
     
+
+    // Vaciar Carrito
     const vaciarCarrito = () =>{
         setCartList([])
     }

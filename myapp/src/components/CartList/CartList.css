@@ -1,0 +1,10 @@
+/* CART PRODUCTOS */
+#productCart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    font-family:  'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;;
+    padding: 10px;
+}

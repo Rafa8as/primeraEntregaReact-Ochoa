@@ -1,0 +1,67 @@
+/* NAVBAR */
+#navbar {
+    background-color: #9DC08B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#navbarnav {
+    display: flex;
+    flex-direction: row;
+}
+
+/* LINKS DE NAVBAR */
+#navlink {
+    font-family:  'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;;
+    text-decoration: none;
+    color: black;
+}
+#navlink:hover {
+    color: #9a70b0;
+}
+#navlink:active {
+    color: #d5e33f;
+}
+
+/* ICONOS CARRITO Y MENU HAMBURGUESA */
+#icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#iconMenu {
+    font-size: 50px;
+}
+#navbarToggle {
+    border: none;
+}
+  
+@media (max-width: 894px) {
+    #navbarnav {
+      gap: 20px;
+    }
+
+    #navlink {
+      font-size: 2em;
+      padding: 0;
+    }
+
+    #iconCart {
+      font-size: 50px;
+    }
+}
+
+@media (min-width: 895px) {
+    #navbarnav {
+      gap: 20px;
+    }
+
+    #navlink {
+        font-size: 30px;
+    }
+
+    #iconCart {
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,19 @@
+/* LOADING */
+.loading{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    padding: 1em;
+}
+
+
+@media (max-width: 894px) {
+    .loading{
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 895px) {
+    .loading{
+        font-size: 3em;
+    }
+}

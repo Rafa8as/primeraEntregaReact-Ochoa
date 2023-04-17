@@ -1,54 +1,42 @@
 import { useState } from "react"
+import './ItemCount.css'
 
 
-const ItemCount = ({ initial= 1, stock=10, onAdd}) => {
-
-    const [count, setCount] = useState(initial)
-
-    const sumar = ()=> {
-        if (count<stock) {
-            setCount(count+1)            
-        }
-    }
-    const restar = ()=> {
-        if (count > initial) {
-            setCount(count-1)            
-        }
-    }
-
-
-
- 
-    return (
-      <div className="card mt-5 w-50" >
-          <div className="card-body row">
-              <div className="col">
-              <button className="btn btn-outline-dark w-100" onClick={sumar}> + </button>
-
-              </div>
-              <div className="col">
-              <center>
-              <label>{count}</label>
-
-              </center> 
+const ItemCount = ({stock, initial, onAdd}) => {
+    
+  const [accountant, setearaccountant] = useState(1)
+  const addToCart = () => onAdd(accountant)
   
-              </div>
-              <div className="col">
-              <button className="btn btn-outline-dark w-100" onClick={restar}> - </button>
+  
+  // FUNCION SUMAR
+  const sumar = () => {
+      if(accountant < stock){
+        setearaccountant (accountant + 1)
+      }
+    }
 
-              </div>
-          </div>
-          <div className="card-footer">
-              <button className="btn btn-outline-dark w-100" onClick={()=>onAdd(count)}>Agregar al carrito</button>
-          </div>
+  // FUNCION RESTAR
+  const restar = () => {
+    if (accountant > initial) {
+      setearaccountant (accountant - 1)
+    }
+  }
 
 
+return (
+  <div id="accountant">
+      <div id="btnAccountant">
+        <button className="btnAccountant btnAccountantSuma" onClick={sumar}>+</button>
+        <button className="btnAccountant btnAccountantResta" onClick={restar}>-</button>
       </div>
-  )
+    <p className="valiuAccountant">{accountant}</p>
+
+    <button className="btnAddToCart" onClick={addToCart}>Agregar al carrito</button>
+  </div>
+)
 }
 
 export default ItemCount
- 
 /*
 const ItemCount = ({initial=1, stock=10, onAdd}) => {
   return (

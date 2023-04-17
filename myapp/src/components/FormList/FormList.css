@@ -1,0 +1,15 @@
+/* TITULO ALERT */
+.swal2-title{
+    font-family: 'Amatic SC', cursive;
+    font-size: 4em;
+}
+
+/* SUBTITULO ALERT */
+.swal2-html-container{
+    font-size: 2em;
+}
+.swal2-footer{
+    font-size: 2em;
+    margin: 0;
+    padding: 0 0 1em 0;
+}

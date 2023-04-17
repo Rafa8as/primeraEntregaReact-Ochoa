@@ -1,0 +1,70 @@
+/* PRODUCTOS */
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 0.3em #9a70b0;
+    border-radius: 3em;
+    padding: 2em;
+    max-width: 70%;
+}
+
+/* TITULO PRODUCTOS */
+.titleProds{
+    text-align: center;
+    font-family: 'Cinzel Decorative', cursive;
+    padding-top: 1em;
+}
+
+/* PRECIO PRODUCTOS */
+.price{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+/* BOTON MAS DETALLES */
+.btnMoreDetails{
+    font-family: 'Amatic SC', cursive;
+    text-decoration: none;
+    background-color: grey;
+    border-radius: 50%;
+    color: black;
+}
+.btnMoreDetails:hover{
+    background-color: #d5e33f;
+    color: black;
+}
+.btnMoreDetails:active{
+    background-color: rgb(253, 241, 180);
+    color: black;
+}
+
+
+@media (max-width: 894px) {
+    .titleProds{
+        font-size: 2em;
+    }
+
+    .price{
+        font-size: 2em;
+    }
+
+    .btnMoreDetails{
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 895px) {
+    .titleProds{
+        font-size: 2.5em;
+    }
+
+    .price{
+        font-size: 2.5em;
+    }
+
+    .btnMoreDetails{
+        font-size: 3em;
+    }
+}

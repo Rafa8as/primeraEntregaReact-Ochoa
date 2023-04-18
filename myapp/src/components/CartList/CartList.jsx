@@ -10,9 +10,9 @@ const CartList = () => {
     return (
       <div id="productCart">
         {cartList.map((producto) => 
-          <Cart 
+          <Cart
             key={producto.id}
-            product={producto}
+            producto={producto}
           />
         )}
       </div>
@@ -21,3 +21,4 @@ const CartList = () => {
 
 
 export default CartList
+

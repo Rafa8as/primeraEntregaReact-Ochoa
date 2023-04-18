@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link, NavLink } from "react-router-dom";
 import './Navbar.css'
 import Preguntas from "../Preguntas/Preguntas";
+import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 
 
 function ColorSchemesExample() {
@@ -12,26 +13,22 @@ function ColorSchemesExample() {
     <>
       <Navbar collapseOnSelect expand="lg" id="navbar" className="sticky-top">
         <Container>
-        <Link to='/'> Supermercadito</Link> 
-          
-          <Nav className="me-auto" id="navbarnav">
+        <NavLink to='/home'> Supermercadito</NavLink> 
+        <div>
+                <NavbarCollapse id="responsive-navbar-nav">
+                    <Nav className="me-auto" id="navbarnav">
+                        <NavLink to='/home' id="navlink">Home</NavLink>
+                        <NavLink to='/category/Almacen' id="navlink">Almacen</NavLink>
+                        <NavLink to='/category/Lacteos' id="navlink">Lacteos</NavLink>
+                        <NavLink to='/Preguntas' id="navlink">Preguntas</NavLink>
+                    </Nav>
+                </NavbarCollapse>
+          </div>
+            <div> 
+            <NavLink to='/cart' id="navlink"> <CartWidget /></NavLink> 
+            </div>
             
-            <NavLink className={({isActive}) =>isActive ? 'btn btn-primary' : 'btn btn-outline-primary'} to='/categoria/Almacen'id="navlink">Almacen</NavLink>
-            <NavLink className={({isActive}) =>isActive ? 'btn btn-primary' : 'btn btn-outline-primary'} to='/categoria/Lacteos'id="navlink">Lacteos y Carnes</NavLink>
-            <NavLink className={({isActive}) =>isActive ? 'btn btn-primary' : 'btn btn-outline-primary'} to='./Preguntas'id="navlink" > Preguntas</NavLink>
-            <nav>
          
-            </nav>
-            <nav>
-           
-             
-            <Link to='/cart' id="navlink"> <CartWidget /></Link> 
-            </nav>
-            {/*<Nav.Link  eventKey={2}> 
-           
-            </Nav.Link>*/}
-            
-          </Nav>
         </Container>
       </Navbar>
      

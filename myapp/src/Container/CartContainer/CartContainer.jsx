@@ -1,53 +1,34 @@
-import React, { useContext } from 'react'
-import { useCartContext } from '../../Context/CartContext'
-import Cartlist from "../../components/CartList/CartList"
-import { addDoc, collection, getFirestore } from "firebase/firestore"
-import Form from '../../components/Form/Form'
+import { CartContextProvider, useCartContext } from '../../Context/CartContext'
+import FormList from '../../components/FormList/FormList'
 import './CartContainer.css'
+import NoProds from '../../components/NoProds/NoProds'
+import CartList from '../../components/CartList/CartList'
 
 const CartContainer = () => {
-  const { cartList, vaciarCarrito, precioTotal, eliminarProducto } = useCartContext()
 
-  const generarOrden = () => {
-    const order = {}
-    order.buyer = dataForm
-    order.precioTotal = precioTotal()
-    order.productos = cartList.map(({ id, name, price }) => ({ id, name, price }))
-
-
-    const db = getFirestore()
-    const queryCollection = collection(db, 'Order')
-    addDoc(queryCollection, order)
-      .then(resp => console.log(resp))
-      .catch(err => console.log(err))
-      .finally(() => { })
-  }
+  const { totalPrice, totalQuantity } = useCartContext();
+  
 
   return (
-    <div>
-      {cartList.map(prodCart => (
+    <>
+      <div className="container">  
+        {totalQuantity() > 0 ?
+        <> 
+          <CartList/>
+          
+          <div id="cartCart">
+            <p className="titleTotalPrice">El total de su compra es de ${totalPrice()}</p>
+          </div>
 
+          <FormList />
+        </>
+        : <NoProds />
+        }
 
-        <div className='container'>
-          <p key={prodCart.id}>
-            <img src="{prodCart.foto}" className='w-20' />
-            Nombre : {prodCart.name} -
-            Cantidad: {prodCart.Cantidad} -
-            Precio: {prodCart.price} {''}
+      </div>
 
-            <button onClick={() => eliminarProducto(prodCart.id)} className='btn btn-danger'>Vaciar carrito</button>
-
-
-          </p>
-        </div>)
-      )
-      }
-      <p> {precioTotal() != 0 && `Precio Total: ${precioTotal()}`} </p>
-
-      <Form />
-      <button onClick={() => generarOrden()} className='btn btn-success'>Generar Orden</button>
-      <button onClick={vaciarCarrito} className='btn btn-primary'>Vaciar carrito</button>
-    </div>
+     
+    </>
   )
 }
 

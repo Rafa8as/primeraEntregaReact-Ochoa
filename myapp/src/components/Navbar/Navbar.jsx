@@ -18,8 +18,8 @@ function ColorSchemesExample() {
                 <NavbarCollapse id="responsive-navbar-nav">
                     <Nav className="me-auto" id="navbarnav">
                         <NavLink to='/home' id="navlink">Home</NavLink>
-                        <NavLink to='/category/Almacen' id="navlink">Almacen</NavLink>
-                        <NavLink to='/category/Lacteos' id="navlink">Lacteos</NavLink>
+                        <NavLink to='/categoria/Almacen' id="navlink">Almacen</NavLink>
+                        <NavLink to='/categoria/Lacteos' id="navlink">Lacteos</NavLink>
                         <NavLink to='/Preguntas' id="navlink">Preguntas</NavLink>
                     </Nav>
                 </NavbarCollapse>

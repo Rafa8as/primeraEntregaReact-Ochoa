@@ -7,7 +7,7 @@ import ItemCount from "../ItemCount/ItemCount"
 
 import './ItemDetail.css'
 
-const ItemDetail = ({producto}) => {
+const ItemDetail = ({prod}) => {
 
   const iva = 1.21
 
@@ -16,7 +16,7 @@ const ItemDetail = ({producto}) => {
 
 
   const onAdd = (quantity) => {
-    addToCart ({...producto, quantity})
+    addToCart ({...prod, quantity})
     setInputType('input')
   }
   
@@ -24,13 +24,13 @@ const ItemDetail = ({producto}) => {
   return (
     <div id="cartItemDetail">
       <div className="container">
-        <h2 className="nameProduct">{producto.name}</h2>
-        <img src={producto.foto} alt="imagen producto" className="imgProduct" />
-        <p className="descriptionProduct">{producto.categoria}</p>
+        <h2 className="nameProduct">{prod.name}</h2>
+        <img src={prod.photo} alt="imagen producto" className="imgProduct" />
+        <p className="descriptionProduct">{prod.description}</p>
 
        
 
-        <p className="priceProduct">${producto.price * iva}</p>
+        <p className="priceProduct">${prod.price * iva}</p>
       </div>
 
       <div>

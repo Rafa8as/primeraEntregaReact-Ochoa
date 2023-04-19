@@ -8,16 +8,6 @@ import { CartContextProvider } from './Context/CartContext'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
-
-
-
-
-
-
-
-
-
-
 function App() {
  
 

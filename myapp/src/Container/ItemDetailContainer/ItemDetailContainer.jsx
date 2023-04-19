@@ -15,6 +15,7 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState (true)
   const {productId} = useParams()
 
+  console.log("Producto: ", prod)
 
   useEffect(() => {
     const db = getFirestore()

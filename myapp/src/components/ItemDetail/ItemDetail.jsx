@@ -9,6 +9,7 @@ import './ItemDetail.css'
 
 const ItemDetail = ({prod}) => {
 
+
   const iva = 1.21
 
   const { addToCart } = useCartContext();
@@ -21,12 +22,13 @@ const ItemDetail = ({prod}) => {
   }
   
 
+ 
   return (
     <div id="cartItemDetail">
       <div className="container">
         <h2 className="nameProduct">{prod.name}</h2>
-        <img src={prod.photo} alt="imagen producto" className="imgProduct" />
-        <p className="descriptionProduct">{prod.description}</p>
+        <img src={prod.foto} alt="imagen producto" className="imgProduct" />
+        <p className="descriptionProduct">{prod.categoria}</p>
 
        
 
@@ -48,4 +50,4 @@ const ItemDetail = ({prod}) => {
   )
 }
 
-export default ItemDetail
+export default ItemDetail 

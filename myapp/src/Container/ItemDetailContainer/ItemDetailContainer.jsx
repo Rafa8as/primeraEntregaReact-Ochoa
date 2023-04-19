@@ -6,16 +6,19 @@ import { useParams } from 'react-router-dom'
 import ItemDetail from '../../components/ItemDetail/ItemDetail'
 import './ItemdetailContainer.css'
 
+
+
 const ItemDetailContainer = () => {
   
   const [prod, setProd] = useState({})
+  
   const [loading, setLoading] = useState (true)
   const {productId} = useParams()
 
 
   useEffect(() => {
     const db = getFirestore()
-    const queryDoc = doc(db, 'products', productId)
+    const queryDoc = doc(db, 'Productos', productId)
 
     getDoc(queryDoc)
     .then(resp => setProd ({id: resp.id, ...resp.data()}))

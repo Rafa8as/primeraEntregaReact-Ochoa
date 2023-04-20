@@ -6,7 +6,7 @@
     border: solid 0.3em #9a70b0;
     border-radius: 3em;
     padding: 2em;
-    max-width: 70%;
+    max-width: 400px;
 }
 
 /* TITULO PRODUCTOS */
@@ -25,10 +25,10 @@
 
 /* BOTON MAS DETALLES */
 .btnMoreDetails{
-    font-family: 'Amatic SC', cursive;
+    font-family:  'Poppins', sans-serif;
     text-decoration: none;
     background-color: grey;
-    border-radius: 50%;
+    border-radius: 50px;
     color: black;
 }
 .btnMoreDetails:hover{
@@ -43,15 +43,15 @@
 
 @media (max-width: 894px) {
     .titleProds{
-        font-size: 2em;
+        font-size: 20px;
     }
 
     .price{
-        font-size: 2em;
+        font-size: 20px;
     }
 
     .btnMoreDetails{
-        font-size: 2em;
+        font-size: 20px;
     }
 }
 

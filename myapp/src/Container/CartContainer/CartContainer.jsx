@@ -3,6 +3,7 @@ import FormList from '../../components/FormList/FormList'
 import './CartContainer.css'
 import NoProds from '../../components/NoProds/NoProds'
 import CartList from '../../components/CartList/CartList'
+import Footer from '../../components/Footer/Footer'
 
 const CartContainer = () => {
 
@@ -27,7 +28,7 @@ const CartContainer = () => {
 
       </div>
 
-    
+     <Footer/>
     </>
   )
 }

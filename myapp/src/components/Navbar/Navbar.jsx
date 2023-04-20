@@ -13,14 +13,14 @@ function ColorSchemesExample() {
     <>
       <Navbar collapseOnSelect expand="lg" id="navbar" className="sticky-top">
         <Container>
-        <NavLink to='/home'> Supermercadito</NavLink> 
+        <NavLink to='/categoria/home'> Supermercadito</NavLink> 
         <div>
                 <NavbarCollapse id="responsive-navbar-nav">
                     <Nav className="me-auto" id="navbarnav">
-                        <NavLink to='/home' id="navlink">Home</NavLink>
+                        
                         <NavLink to='/categoria/Almacen' id="navlink">Almacen</NavLink>
                         <NavLink to='/categoria/Lacteos' id="navlink">Lacteos</NavLink>
-                        <NavLink to='/Preguntas' id="navlink">Preguntas </NavLink>
+                        <NavLink to='/Preguntas' id="navlink"> Preguntas</NavLink>
                     </Nav>
                 </NavbarCollapse>
           </div>

@@ -12,7 +12,7 @@
 
 /* IMAGEN */
 .imgProduct{
-    max-width: 50%;
+    max-width: 300px;
     height: auto;
     border-radius: 10%;
 }

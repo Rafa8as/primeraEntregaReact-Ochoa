@@ -2,6 +2,7 @@ import {doc, getDoc, getFirestore} from 'firebase/firestore'
 import { useEffect,useState } from 'react'
 
 import { useParams } from 'react-router-dom'
+import Footer from '../../components/Footer/Footer'
 
 import ItemDetail from '../../components/ItemDetail/ItemDetail'
 import './ItemdetailContainer.css'
@@ -34,7 +35,7 @@ const ItemDetailContainer = () => {
         : <ItemDetail prod={prod}/>
       }
       <div>
-       
+       <Footer/>
       </div>
     </>
   )

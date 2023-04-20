@@ -6,6 +6,7 @@ import ItemList from "../../components/ItemList/ItemList"
 
 import { Loading } from "../../components/Loading/Loading"
 import './ItemListContainer.css'
+import Footer from "../../components/Footer/Footer"
 
 const ItemListContainer = ({ saludos }) => {
 
@@ -32,7 +33,7 @@ const ItemListContainer = ({ saludos }) => {
             <div className="container" id="cardProds">
             {loading ?
                     <div id="cardLoading">
-                        <p className="loading">Cargando productos</p>
+                        <p className="loading">Cargando Productos</p>
                         <Spinner animation="grow" className = "spinner"/>
                         </div>
                 
@@ -42,6 +43,9 @@ const ItemListContainer = ({ saludos }) => {
                     <ItemList productos={productos} />
                 
             }
+            </div>
+            <div>
+                <Footer/>
             </div>
         </>
     )

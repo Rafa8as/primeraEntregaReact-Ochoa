@@ -6,6 +6,7 @@ import ItemDetailContainer from './Container/ItemDetailContainer/ItemDetailConta
 import CartContainer from './Container/CartContainer/CartContainer'
 import { CartContextProvider } from './Context/CartContext'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Preguntas from './components/Preguntas/Preguntas'
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
                   <Route path='/categoria/:idCategoria' element ={<ItemListContainer/>} />
                   <Route path='/detalle/:idProducto' element ={<ItemDetailContainer/>} />
                   <Route path='/cart' element ={<CartContainer />} />
-                 
+                  <Route path='/Preguntas' element={<Preguntas/>} />
                   <Route path='*' element ={<Navigate to='/' />} />
           </Routes>
           

@@ -39,15 +39,15 @@ const FormList = () => {
             }) 
           )
           .catch(err => console.log(err))
-          //.finally(() => {
-           // vaciarCarrito()
-           // setDataForm({
-            //  name: "",
-            //  email: "",
-             // email2: "",
-              //phone: "",
-           // })
-         // })      
+          .finally(() => {
+            vaciarCarrito()
+            setDataForm({
+              name: "",
+             email: "",
+              email2: "",
+              phone: "",
+           })
+         })      
         } else {
           Swal.fire({
             icon: 'error',

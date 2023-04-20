@@ -12,7 +12,7 @@ const Item = memo(({ producto }) => {
     <img src={producto.foto} alt="img producto" className="img-fluid" />
     <p className="titleProds">{producto.name}</p>
     <p className="price">${producto.price * iva}</p>
-    <Link to={`/detalle/${producto.id}`} className="btnMoreDetails">Mas detalles</Link>
+    <Link to={`/detalle/${producto.id}`} className="btnMoreDetails">Comprar</Link>
 </div>
    
   )

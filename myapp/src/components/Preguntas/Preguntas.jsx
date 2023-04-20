@@ -1,3 +1,6 @@
+import Footer from '../Footer/Footer'
+import './Preguntas.css'
+
 const Preguntas = () => {
   
     return (
@@ -20,12 +23,13 @@ const Preguntas = () => {
             <h2 className="subtitleQuestions">Método de envio</h2>
             <p className="text2Questions">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias praesentium at error delectus, recusandae fugiat cumque quidem illo commodi tempore deleniti asperiores quo ad repellat nesciunt nostrum atque pariatur explicabo?</p>
           
-            <h2 className="subtitleQuestions">Cómo se cual es mi talle?</h2>
-            <p className="text2Questions">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias praesentium at error delectus, recusandae fugiat cumque quidem illo commodi tempore deleniti asperiores quo ad repellat nesciunt nostrum atque pariatur explicabo?</p>
+            
           </div>
+
+          
         </div>
   
-       
+        <Footer/>
       </div>
     )
   }

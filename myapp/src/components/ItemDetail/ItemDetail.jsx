@@ -16,8 +16,8 @@ const ItemDetail = ({prod}) => {
   const [inputType, setInputType] = useState('button');
 
 
-  const onAdd = (quantity) => {
-    addToCart ({...prod, quantity})
+  const onAdd = (cantidad) => {
+    addToCart ({...prod, cantidad})
     setInputType('input')
   }
   

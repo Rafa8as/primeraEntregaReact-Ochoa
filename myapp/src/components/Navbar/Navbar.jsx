@@ -20,7 +20,7 @@ function ColorSchemesExample() {
                         <NavLink to='/home' id="navlink">Home</NavLink>
                         <NavLink to='/categoria/Almacen' id="navlink">Almacen</NavLink>
                         <NavLink to='/categoria/Lacteos' id="navlink">Lacteos</NavLink>
-                        <NavLink to='/Preguntas' id="navlink">Preguntas</NavLink>
+                        <NavLink to='/Preguntas' id="navlink">Preguntas </NavLink>
                     </Nav>
                 </NavbarCollapse>
           </div>

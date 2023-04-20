@@ -14,7 +14,7 @@ const FormList = () => {
         phone: "",
       });
 
-    const {cartList, totalPrice, cleanCart} = useCartContext();
+    const {cartList, precioTotal, vaciarCarrito} = useCartContext();
 
     const endBuy = (evt) => {
         evt.preventDefault()
@@ -22,7 +22,7 @@ const FormList = () => {
         const order = {}
         order.buyer = dataForm
         order.item = cartList.map( ({name, id, price}) => ({name, id, price}) )
-        order.total = totalPrice()
+        order.total = precioTotal()
 
         
         const db = getFirestore()
@@ -39,15 +39,15 @@ const FormList = () => {
             }) 
           )
           .catch(err => console.log(err))
-          .finally(() => {
-            cleanCart()
-            setDataForm({
-              name: "",
-              email: "",
-              email2: "",
-              phone: "",
-            })
-          })       
+          //.finally(() => {
+           // vaciarCarrito()
+           // setDataForm({
+            //  name: "",
+            //  email: "",
+             // email2: "",
+              //phone: "",
+           // })
+         // })      
         } else {
           Swal.fire({
             icon: 'error',

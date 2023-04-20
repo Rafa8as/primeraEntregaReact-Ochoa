@@ -13,19 +13,19 @@ const ItemDetailContainer = () => {
   const [prod, setProd] = useState({})
   
   const [loading, setLoading] = useState (true)
-  const {productId} = useParams()
+  const {idProducto} = useParams()
 
   console.log("Producto: ", prod)
 
   useEffect(() => {
     const db = getFirestore()
-    const queryDoc = doc(db, 'Productos', productId)
+    const queryDoc = doc(db, 'Productos', idProducto)
 
     getDoc(queryDoc)
     .then(resp => setProd ({id: resp.id, ...resp.data()}))
     .catch(err => console.log(err))
     .finally( ()=> setLoading (false))
-  })
+  },[idProducto] )
 
 
   return (

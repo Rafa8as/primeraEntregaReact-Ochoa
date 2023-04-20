@@ -3,16 +3,16 @@ import './Cart.css'
 
 const Cart = ({producto}) => {
 
-  const { deleteItem } = useCartContext()
+  const { eliminarProducto } = useCartContext()
   const iva = 1.21
 
 
   return (
     <div id="cartList">
       <p className="titleCartItem">{producto.name}</p>
-      <p className="cartItem">Cantidad: {producto.quantity}</p>
-      <p className="cartItem">Precio: ${producto.quantity * producto.price * iva}</p>
-      <button onClick={() => deleteItem(producto.id)} className="btnRemove">eliminar</button>
+      <p className="cartItem">Cantidad: {producto.cantidad}</p>
+      <p className="cartItem">Precio: ${producto.cantidad * producto.price * iva}</p>
+      <button onClick={() => eliminarProducto(producto.id)} className="btnRemove">eliminar</button>
     </div>
   )
 }

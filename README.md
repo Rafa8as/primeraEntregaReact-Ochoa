@@ -39,5 +39,7 @@ Installation
 Supermercadito requiere React.js v18.2.0 to run.
 
 cd myapp
+
 npm i
+
 npm run dev
